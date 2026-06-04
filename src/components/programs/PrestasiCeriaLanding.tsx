@@ -128,14 +128,20 @@ export default function PrestasiCeriaLanding() {
             ))}
           </div>
 
-          <a
-            href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Prestasi%20Mulia%20English%20Course"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-amber-500 text-white text-sm font-bold rounded-xl hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/20"
-          >
-            Daftar Sekarang
-          </a>
+          <div className="flex items-center gap-3">
+            <Link 
+              href="/login"
+              className="hidden sm:block px-5 py-2.5 text-amber-600 text-sm font-bold hover:bg-amber-50 rounded-xl transition-colors"
+            >
+              Masuk
+            </Link>
+            <Link
+              href="/register?program_code=prestasi-ceria&type=student"
+              className="px-5 py-2.5 bg-amber-500 text-white text-sm font-bold rounded-xl hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/20"
+            >
+              Daftar Sekarang
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -187,14 +193,12 @@ export default function PrestasiCeriaLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Prestasi%20Mulia%20English%20Course"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/register?program_code=prestasi-ceria&type=student"
                   className="px-8 py-4 bg-amber-500 text-white font-bold rounded-2xl text-center hover:bg-amber-600 transition-all shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/30 hover:-translate-y-0.5"
                 >
                   Daftar Sekarang
-                </a>
+                </Link>
                 <button
                   onClick={() => scrollToSection("#tentang")}
                   className="px-8 py-4 bg-gray-100 text-gray-700 font-bold rounded-2xl text-center hover:bg-gray-200 transition-all"
@@ -400,15 +404,13 @@ export default function PrestasiCeriaLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Prestasi%20Mulia%20English%20Course"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/register?program_code=prestasi-ceria&type=student"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-white text-amber-600 font-bold rounded-2xl hover:bg-amber-50 transition-all shadow-xl hover:-translate-y-0.5"
                 >
                   <PhoneIcon className="w-5 h-5" />
-                  Hubungi via WhatsApp
-                </a>
+                  Daftar via Formulir
+                </Link>
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/20"

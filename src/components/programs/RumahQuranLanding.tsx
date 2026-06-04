@@ -129,14 +129,20 @@ export default function RumahQuranLanding() {
             ))}
           </div>
 
-          <a
-            href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Rumah%20Quran%20Baitussalam"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-emerald-500 text-white text-sm font-bold rounded-xl hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/20"
-          >
-            Daftar Sekarang
-          </a>
+          <div className="flex items-center gap-3">
+            <Link 
+              href="/login"
+              className="hidden sm:block px-5 py-2.5 text-emerald-600 text-sm font-bold hover:bg-emerald-50 rounded-xl transition-colors"
+            >
+              Masuk
+            </Link>
+            <Link
+              href="/register?program_code=rumah-quran&type=student"
+              className="px-5 py-2.5 bg-emerald-500 text-white text-sm font-bold rounded-xl hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/20"
+            >
+              Daftar Sekarang
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -190,14 +196,12 @@ export default function RumahQuranLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Rumah%20Quran%20Baitussalam"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/register?program_code=rumah-quran&type=student"
                   className="px-8 py-4 bg-emerald-500 text-white font-bold rounded-2xl text-center hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-500/25 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-0.5"
                 >
                   Daftar Sekarang
-                </a>
+                </Link>
                 <button
                   onClick={() => scrollToSection("#tentang")}
                   className="px-8 py-4 bg-gray-100 text-gray-700 font-bold rounded-2xl text-center hover:bg-gray-200 transition-all"
@@ -304,7 +308,6 @@ export default function RumahQuranLanding() {
         </div>
       </section>
 
-      {/* ======= KEUNGGULAN SECTION ======= */}
       <section id="keunggulan" className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-5 lg:px-6">
           <div className="text-center mb-12">
@@ -349,7 +352,6 @@ export default function RumahQuranLanding() {
         </div>
       </section>
 
-      {/* ======= PROGRAM BELAJAR SECTION ======= */}
       <section id="program" className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-5 lg:px-6">
           <div className="text-center mb-12">
@@ -393,7 +395,6 @@ export default function RumahQuranLanding() {
         </div>
       </section>
 
-      {/* ======= CTA / KONTAK SECTION ======= */}
       <section id="kontak" className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-5 lg:px-6">
           <div className="bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-700 rounded-3xl p-8 lg:p-16 text-center text-white relative overflow-hidden">
@@ -411,15 +412,13 @@ export default function RumahQuranLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="https://wa.me/628112841212?text=Assalamu'alaikum,%20saya%20ingin%20mendaftar%20program%20Rumah%20Quran%20Baitussalam"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/register?program_code=rumah-quran&type=student"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-600 font-bold rounded-2xl hover:bg-emerald-50 transition-all shadow-xl hover:-translate-y-0.5"
                 >
                   <PhoneIcon className="w-5 h-5" />
-                  Hubungi via WhatsApp
-                </a>
+                  Daftar via Formulir
+                </Link>
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/20"
@@ -433,7 +432,6 @@ export default function RumahQuranLanding() {
         </div>
       </section>
 
-      {/* ======= FOOTER ======= */}
       <footer className="py-8 lg:py-12 border-t border-gray-100 pb-24 lg:pb-12">
         <div className="max-w-6xl mx-auto px-5 lg:px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
