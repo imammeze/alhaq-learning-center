@@ -12,11 +12,15 @@ import {
   ChevronRightIcon,
   BuildingIcon,
   CheckCircle2Icon,
+  HomeIcon,
+  InfoIcon,
+  PhoneIcon,
+  LogInIcon
 } from "lucide-react";
 
 export default function LearningCenterPortal() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-20 md:pb-0">
       {/* ======= NAVBAR ======= */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -37,6 +41,9 @@ export default function LearningCenterPortal() {
             <a href="#program" className="text-sm font-medium text-gray-600 hover:text-rose-900 transition-colors">Program Kami</a>
             <a href="#tentang" className="text-sm font-medium text-gray-600 hover:text-rose-900 transition-colors">Tentang Kami</a>
             <a href="#hubungi" className="text-sm font-medium text-gray-600 hover:text-rose-900 transition-colors">Hubungi</a>
+            <Link href="/login" className="px-5 py-2.5 bg-rose-900 text-white text-sm font-bold rounded-xl hover:bg-rose-950 transition-colors">
+              Masuk
+            </Link>
           </div>
         </div>
       </nav>
@@ -78,7 +85,6 @@ export default function LearningCenterPortal() {
         </div>
       </section>
 
-      {/* ======= PROGRAM HIGHLIGHTS ======= */}
       <section id="program" className="py-16 lg:py-24 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto px-5 lg:px-6">
           <div className="text-center mb-16">
@@ -263,6 +269,28 @@ export default function LearningCenterPortal() {
           </div>
         </div>
       </footer>
+
+      {/* ======= BOTTOM NAVBAR (MOBILE) ======= */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] pb-safe">
+        <div className="flex items-center justify-around px-2 py-2">
+          <a href="#" className="flex flex-col items-center gap-1 py-1.5 px-3 text-rose-900 transition-colors">
+            <HomeIcon className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Beranda</span>
+          </a>
+          <a href="#program" className="flex flex-col items-center gap-1 py-1.5 px-3 text-gray-500 hover:text-rose-900 transition-colors">
+            <BookOpenIcon className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Program</span>
+          </a>
+          <a href="#tentang" className="flex flex-col items-center gap-1 py-1.5 px-3 text-gray-500 hover:text-rose-900 transition-colors">
+            <InfoIcon className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Tentang</span>
+          </a>
+          <Link href="/login" className="flex flex-col items-center gap-1 py-1.5 px-3 text-gray-500 hover:text-rose-900 transition-colors">
+            <LogInIcon className="w-5 h-5" />
+            <span className="text-[10px] font-medium">Login</span>
+          </Link>
+        </div>
+      </nav>
     </div>
   );
 }
