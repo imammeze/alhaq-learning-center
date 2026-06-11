@@ -66,7 +66,7 @@ const kurikulum = [
   "Hafalan Doa Harian",
   "Adab dan Akhlak Islami",
   "Kisah-Kisah Nabi & Rasul",
-  "Creative Day"
+  "Creative Day",
 ];
 
 export default function AlhaqKidsLanding() {
@@ -104,24 +104,21 @@ export default function AlhaqKidsLanding() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
-              >
+                className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
                 {link.label}
               </button>
             ))}
           </div>
 
           <div className="flex items-center gap-3">
-            <Link 
+            <Link
               href="/login"
-              className="hidden sm:block px-5 py-2.5 text-blue-600 text-sm font-bold hover:bg-blue-50 rounded-xl transition-colors"
-            >
+              className="hidden sm:block px-5 py-2.5 text-blue-600 text-sm font-bold hover:bg-blue-50 rounded-xl transition-colors">
               Masuk
             </Link>
             <Link
               href="/register?program_code=alhaq-kids&type=parent"
-              className="px-5 py-2.5 bg-blue-500 text-white text-sm font-bold rounded-xl hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
-            >
+              className="px-5 py-2.5 bg-blue-500 text-white text-sm font-bold rounded-xl hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20">
               Daftar Sekarang
             </Link>
           </div>
@@ -136,8 +133,7 @@ export default function AlhaqKidsLanding() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="flex flex-col items-center gap-0.5 py-1.5 px-3 text-gray-500 hover:text-blue-600 transition-colors"
-              >
+                className="flex flex-col items-center gap-0.5 py-1.5 px-3 text-gray-500 hover:text-blue-600 transition-colors">
                 <Icon className="w-5 h-5" />
                 <span className="text-[9px] font-bold">{link.label}</span>
               </button>
@@ -149,8 +145,7 @@ export default function AlhaqKidsLanding() {
 
       <section
         id="beranda"
-        className="relative overflow-hidden pt-20 lg:pt-32 pb-16 lg:pb-24"
-      >
+        className="relative overflow-hidden pt-20 lg:pt-32 pb-16 lg:pb-24">
         <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-30 translate-y-1/2 -translate-x-1/2" />
 
@@ -179,14 +174,12 @@ export default function AlhaqKidsLanding() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/register?program_id=1&type=parent"
-                  className="px-8 py-4 bg-blue-500 text-white font-bold rounded-2xl text-center hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
-                >
+                  className="px-8 py-4 bg-blue-500 text-white font-bold rounded-2xl text-center hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
                   Daftar Sekarang
                 </Link>
                 <button
                   onClick={() => scrollToSection("#tentang")}
-                  className="px-8 py-4 bg-gray-100 text-gray-700 font-bold rounded-2xl text-center hover:bg-gray-200 transition-all"
-                >
+                  className="px-8 py-4 bg-gray-100 text-gray-700 font-bold rounded-2xl text-center hover:bg-gray-200 transition-all">
                   Pelajari Lebih Lanjut
                 </button>
               </div>
@@ -194,7 +187,7 @@ export default function AlhaqKidsLanding() {
 
             <div className="hidden lg:block lg:flex-1">
               <div className="relative">
-                <div className="w-full aspect-square max-w-md mx-auto bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
+                <div className="w-full aspect-square max-w-md mx-auto bg-linear-to-br from-blue-400 via-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
                   <div className="text-center text-white p-10">
                     <BookOpenIcon className="w-20 h-20 mx-auto mb-6 opacity-90" />
                     <h2 className="text-3xl font-bold mb-2">Alhaq Kids</h2>
@@ -227,15 +220,15 @@ export default function AlhaqKidsLanding() {
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
               Alhaq Kids Center adalah program bimbingan belajar mengaji yang
-              diselenggarakan oleh Masjid Al Haq Bata Merah Purwokerto,
-              khusus dirancang untuk anak-anak usia <strong>4 – 12 tahun</strong>{" "}
-              (TK dan SD kelas awal).
+              diselenggarakan oleh Masjid Al Haq Bata Merah Purwokerto, khusus
+              dirancang untuk anak-anak usia <strong>4 – 12 tahun</strong> (TK
+              dan SD kelas awal).
             </p>
           </div>
 
           <div className="lg:flex lg:items-center lg:gap-12">
             <div className="lg:flex-1 mb-8 lg:mb-0">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 lg:p-12 text-white">
+              <div className="bg-linear-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 lg:p-12 text-white">
                 <GraduationCapIcon className="w-12 h-12 mb-6 opacity-90" />
                 <h3 className="text-2xl font-bold mb-4">
                   Membentuk Generasi Qurani Sejak Dini
@@ -270,8 +263,7 @@ export default function AlhaqKidsLanding() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 hover:border-blue-200 transition-colors"
-                >
+                  className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 hover:border-blue-200 transition-colors">
                   <div className="text-2xl">{item.emoji}</div>
                   <div>
                     <h4 className="font-bold text-gray-800 mb-1">
@@ -310,11 +302,9 @@ export default function AlhaqKidsLanding() {
               return (
                 <div
                   key={item.title}
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
-                >
+                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${item.color}`}
-                  >
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${item.color}`}>
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
@@ -353,8 +343,7 @@ export default function AlhaqKidsLanding() {
               {kurikulum.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-4 hover:border-emerald-200 transition-colors"
-                >
+                  className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-4 hover:border-emerald-200 transition-colors">
                   <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <CheckCircle2Icon className="w-5 h-5" />
                   </div>
@@ -368,7 +357,7 @@ export default function AlhaqKidsLanding() {
 
       <section id="kontak" className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-5 lg:px-6">
-          <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-3xl p-8 lg:p-16 text-center text-white relative overflow-hidden">
+          <div className="bg-linear-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-3xl p-8 lg:p-16 text-center text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-60 h-60 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -383,17 +372,15 @@ export default function AlhaqKidsLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/register?program_id=1&type=parent" 
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-xl hover:-translate-y-0.5"
-                >
+                <Link
+                  href="/register?program_id=1&type=parent"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-xl hover:-translate-y-0.5">
                   <PhoneIcon className="w-5 h-5" />
                   Daftar via Formulir
                 </Link>
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/20"
-                >
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/20">
                   Kembali ke Beranda
                   <ChevronRightIcon className="w-4 h-4" />
                 </Link>
@@ -417,7 +404,8 @@ export default function AlhaqKidsLanding() {
               Kabar Terbaru
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
-              Ikuti terus update kegiatan dan artikel bermanfaat dari Alhaq Kids Center.
+              Ikuti terus update kegiatan dan artikel bermanfaat dari Alhaq Kids
+              Center.
             </p>
           </div>
 
