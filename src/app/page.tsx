@@ -30,7 +30,7 @@ export default function LearningCenterPortal() {
             </div>
             <div>
               <h1 className="text-sm font-bold text-gray-800">
-                Al-Haq Learning Center
+                Batamerah Learning Center
               </h1>
               <p className="text-[10px] text-gray-500">
                 Yayasan Bata Merah Purwokerto
@@ -201,7 +201,7 @@ export default function LearningCenterPortal() {
                   <span className="text-xs font-bold text-rose-100">Visi Kami</span>
                 </div>
                 <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-6">
-                  Kenapa Memilih Al-Haq Learning Center?
+                  Kenapa Memilih Batamerah Learning Center?
                 </h2>
                 <p className="text-slate-300 text-lg leading-relaxed mb-8">
                   Berdiri di bawah naungan Yayasan Masjid Al Haq Bata Merah, 
@@ -248,7 +248,7 @@ export default function LearningCenterPortal() {
                 <BuildingIcon className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-800">Al-Haq Learning Center</h2>
+                <h2 className="text-lg font-bold text-gray-800">Batamerah Learning Center</h2>
                 <p className="text-xs text-gray-500">Yayasan Bata Merah Purwokerto</p>
               </div>
             </div>
