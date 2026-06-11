@@ -66,7 +66,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <BuildingIcon className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h2 className="text-sm font-bold text-gray-900">Al-Haq</h2>
+              <h2 className="text-sm font-bold text-gray-900">Batamerah</h2>
               <p className="text-xs text-gray-500">Learning Center</p>
             </div>
           </div>
