@@ -16,6 +16,7 @@ import {
   InfoIcon,
   PhoneIcon,
   LogInIcon,
+  NewspaperIcon,
 } from "lucide-react";
 
 export default function LearningCenterPortal() {

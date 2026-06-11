@@ -434,7 +434,17 @@ export default function PrestasiCeriaLanding() {
             </p>
           </div>
 
-          <ArticleList programCode="prestasi-ceria" colorTheme="amber" />
+          <ArticleList programCode="prestasi-ceria" colorTheme="amber" limit={3} />
+
+          <div className="text-center mt-12">
+            <Link 
+              href="/prestasi-ceria/artikel" 
+              className="px-8 py-3.5 border-2 border-amber-200 text-amber-600 font-bold rounded-2xl hover:bg-amber-50 transition-colors inline-flex items-center gap-2 group"
+            >
+              Lihat Semua Artikel
+              <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 

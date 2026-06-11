@@ -438,7 +438,17 @@ export default function RumahQuranLanding() {
             </p>
           </div>
 
-          <ArticleList programCode="rumah-quran" colorTheme="emerald" />
+          <ArticleList programCode="rumah-quran" colorTheme="emerald" limit={3} />
+
+          <div className="text-center mt-12">
+            <Link 
+              href="/rumah-quran/artikel" 
+              className="px-8 py-3.5 border-2 border-emerald-200 text-emerald-600 font-bold rounded-2xl hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 group"
+            >
+              Lihat Semua Artikel
+              <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 

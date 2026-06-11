@@ -409,7 +409,17 @@ export default function AlhaqKidsLanding() {
             </p>
           </div>
 
-          <ArticleList programCode="alhaq-kids" colorTheme="blue" />
+          <ArticleList programCode="alhaq-kids" colorTheme="blue" limit={3} />
+
+          <div className="text-center mt-12">
+            <Link 
+              href="/alhaq-kids/artikel" 
+              className="px-8 py-3.5 border-2 border-blue-200 text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-colors inline-flex items-center gap-2 group"
+            >
+              Lihat Semua Artikel
+              <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 

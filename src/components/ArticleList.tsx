@@ -11,21 +11,27 @@ interface Article {
   content: string;
   created_at: string;
   program: string | null;
+  program_code: string;
 }
 
 interface ArticleListProps {
   programCode: string;
   colorTheme?: 'blue' | 'emerald' | 'amber';
+  limit?: number;
 }
 
-export default function ArticleList({ programCode, colorTheme = 'blue' }: ArticleListProps) {
+export default function ArticleList({ programCode, colorTheme = 'blue', limit }: ArticleListProps) {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/api/articles?program_code=${programCode}`);
+        const url = new URL(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/api/articles`);
+        if (programCode && programCode !== 'all') {
+          url.searchParams.append('program_code', programCode);
+        }
+        const response = await fetch(url.toString());
         const result = await response.json();
         if (result.status === 'success') {
           setArticles(result.data);
@@ -56,9 +62,11 @@ export default function ArticleList({ programCode, colorTheme = 'blue' }: Articl
     );
   }
 
+  const displayedArticles = limit ? articles.slice(0, limit) : articles;
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {articles.map((article) => (
+      {displayedArticles.map((article) => (
         <ArticleCard key={article.id} article={article} colorTheme={colorTheme} programCode={programCode} />
       ))}
     </div>

@@ -10,6 +10,7 @@ interface Article {
   content: string;
   created_at: string;
   program: string | null;
+  program_code: string;
 }
 
 interface ArticleCardProps {
@@ -19,6 +20,9 @@ interface ArticleCardProps {
 }
 
 export default function ArticleCard({ article, colorTheme = 'blue', programCode = 'umum' }: ArticleCardProps) {
+  // Gunakan program_code dari artikel, atau fallback ke programCode prop
+  const routeCode = article.program_code || programCode || 'umum';
+
   const themeStyles = {
     blue: 'hover:border-blue-200 text-blue-600 bg-blue-50',
     emerald: 'hover:border-emerald-200 text-emerald-600 bg-emerald-50',
@@ -61,7 +65,7 @@ export default function ArticleCard({ article, colorTheme = 'blue', programCode 
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
         <Link 
-          href={`/${programCode}/artikel/${article.slug}`}
+          href={routeCode === 'umum' ? `/artikel/${article.slug}` : `/${routeCode}/artikel/${article.slug}`}
           className={`inline-flex items-center gap-1 text-sm font-bold mt-auto transition-colors ${badgeColor.split(' ')[1]}`}
         >
           Baca Selengkapnya
