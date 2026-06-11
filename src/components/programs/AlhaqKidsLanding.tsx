@@ -18,6 +18,7 @@ import {
   ChevronRightIcon,
   CheckCircle2Icon,
 } from "lucide-react";
+import ArticleList from "../ArticleList";
 
 const navLinks = [
   { label: "Beranda", href: "#beranda", icon: HomeIcon },
@@ -399,6 +400,28 @@ export default function AlhaqKidsLanding() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Artikel & Berita Section */}
+      <section id="artikel" className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-5 lg:px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full mb-4">
+              <BookOpenIcon className="w-4 h-4 text-blue-500" />
+              <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">
+                Artikel & Berita
+              </span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Kabar Terbaru
+            </h2>
+            <p className="text-gray-500 max-w-lg mx-auto">
+              Ikuti terus update kegiatan dan artikel bermanfaat dari Alhaq Kids Center.
+            </p>
+          </div>
+
+          <ArticleList programCode="alhaq-kids" colorTheme="blue" />
         </div>
       </section>
 
