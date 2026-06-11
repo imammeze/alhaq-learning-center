@@ -48,6 +48,14 @@ export async function getStudentModules() {
   return res.json();
 }
 
+export async function downloadStudentModule(moduleId: string) {
+  const res = await fetchWithAuth(`/student/modules/${moduleId}/download`);
+  if (!res.ok) {
+    throw new Error("Failed to download");
+  }
+  return res.blob();
+}
+
 export async function getStudentRegistrations() {
   const res = await fetchWithAuth("/student/registrations");
   return res.json();
@@ -55,5 +63,15 @@ export async function getStudentRegistrations() {
 
 export async function getMe() {
   const res = await fetchWithAuth("/me");
+  return res.json();
+}
+
+export async function resetPassword(data: any) {
+  const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api`;
+  const res = await fetch(`${API_BASE_URL}/reset-password`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify(data),
+  });
   return res.json();
 }
