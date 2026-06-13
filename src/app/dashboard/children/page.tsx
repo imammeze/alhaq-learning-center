@@ -85,7 +85,7 @@ export default function ChildrenPage() {
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-2">Belum Ada Anak Terdaftar</h3>
           <p className="text-gray-500 max-w-sm mb-6">
-            Anda belum mendaftarkan anak pada program apapun di Al-Haq Learning Center.
+            Anda belum mendaftarkan anak pada program apapun di Batamerah Learning Center.
           </p>
           <Link href="/dashboard/children/new" className="px-6 py-3 bg-rose-900 text-white font-bold rounded-xl hover:bg-rose-950 transition-colors">
             Daftarkan Anak Baru

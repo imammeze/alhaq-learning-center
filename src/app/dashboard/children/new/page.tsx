@@ -9,6 +9,7 @@ import { registerNewChild } from "@/lib/api";
 const programs = [
   { code: "alhaq-kids", name: "Al-Haq Kids" },
   { code: "rumah-quran", name: "Rumah Qur'an" },
+  { code: "prestasi-ceria", name: "Prestasi Ceria Academy" },
 ];
 
 export default function NewChildPage() {

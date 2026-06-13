@@ -170,7 +170,7 @@ export default function RegisterPage() {
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-gray-900">Pendaftaran Online</h1>
-                <p className="text-gray-500">Al-Haq Learning Center</p>
+                <p className="text-gray-500">Batamerah Learning Center</p>
               </div>
             </div>
             <Link 
